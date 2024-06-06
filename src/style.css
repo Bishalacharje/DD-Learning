@@ -1,0 +1,353 @@
+/*---------------------------------------------------- Color ------------------------- ------------*/
+:root {
+
+    --primary-blue: #06103C;
+    --primary-blue-two: #141450;
+    --primary-blue-three: #913BFF;
+}
+
+
+/* -----------------------------  Google Fonts ------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Universal Selector Start ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.conSection {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Universal Selector End ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Top Header Start ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+.topheaderSection {
+    background-color: var(--primary-blue);
+    color: #fff;
+}
+
+.topheader {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 25px 0;
+}
+
+.topheader .headLogo h1 {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 32px;
+
+}
+
+.topheader .headLogo h1 span {
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.topheader .headcontact {
+    display: flex;
+    justify-content: end;
+}
+
+.headcontact .headcontactItem {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.headcontactItem.center {
+    margin: 0 30px;
+    padding: 0 30px;
+    position: relative;
+}
+
+.headcontactItem.center::after {
+    background: hsla(0, 0%, 100%, .2);
+    content: "";
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 3px;
+    z-index: 1;
+}
+
+.headcontactItem.center::before {
+    background: hsla(0, 0%, 100%, .2);
+    content: "";
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 2px;
+    z-index: 1;
+}
+
+.headcontact .headcontactItem img {
+    height: 30px;
+}
+
+.headcontact .headcontactItem p {
+    font-size: 15px;
+    font-size: 100;
+}
+
+.headcontact .headcontactItem h5 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Top Header End ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Header Navbar Start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+.headerSection {
+
+    background-color: var(--primary-blue-two);
+    color: #fff;
+    z-index: 999;
+}
+
+.headerSection .navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+
+.headerSection.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-blue);
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
+    /* Add any other styles for the sticky header */
+}
+
+.navbar .navbarLeft .navmenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 70px;
+}
+
+.navbar .navbarLeft .navmenu li {
+    padding: 16px 0;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.navbar .navbarLeft .navmenu li:hover{
+    color: var(--primary-blue-three);
+}
+
+.navmenu li .submenu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    width: 200px;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    z-index: 999;
+}
+
+.navmenu li .submenu li {
+    padding: 10px 20px !important;
+    transition: all 0.3s ease-in-out;
+}
+.navmenu li .submenu li:hover{
+    background-color: var(--primary-blue-three);
+}
+
+.navmenu li .submenu li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+.navmenu li .submenu li:hover a{
+
+    color: #fff;
+}
+
+.navmenu li:hover .submenu {
+    max-height: 500px;
+    /* Adjust based on submenu content */
+    opacity: 1;
+}
+
+.navmenu li .submenu li {
+    display: block;
+}
+
+
+
+.navbar .navbarRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.navbar .navbarRight button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navbar .navbarRight button img {
+    height: 20px;
+    margin-top: 2px;
+}
+
+.navbar .navbarRight .menuBtn {
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .navbarRight .menuBtn img {
+    height: 16px;
+    margin-top: 0;
+}
+
+.navbar .navbarRight .menuBtn:hover {
+    background-color: var(--primary-blue-three);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Header Navbar End  ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Footer Section ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+.footerSection {
+    width: 100%;
+    height: 400px;
+    background-color: blueviolet;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Footer Section ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+/**************************************************  Home Page Start  ***********************************************/
+
+
+
+
+.heroSection {
+    height: calc(100vh - 150px);
+    background-color: var(--primary-blue);
+}
+.patternCon{
+    position: relative;
+}
+.patternCon .patternImg{
+   height: 90%;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.2;
+}
+.patternCon .patternImg2{
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* .patternImgcenter{
+    height: 200px;
+    object-fit: contain;
+    opacity: 0.1;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+    animation: updown 10s infinite;
+}
+@keyframes updown {
+    0% {
+      transform: translateY(0px);
+      
+    }
+    50% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+  } */
+
+
+/**************************************************  Home Page End  ***********************************************/
