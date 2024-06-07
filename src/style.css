@@ -4,7 +4,20 @@
     --primary-blue: #06103C;
     --primary-blue-two: #141450;
     --primary-blue-three: #913BFF;
+    --white: #f9f9f9;
 }
+
+/*---------------------------------------------------- Text Selection------------------------- ------------*/
+::-moz-selection { /* Code for Firefox */
+    color: var(--white);
+    background: var();
+}
+
+::selection {
+    color: var(--primary-blue-three);
+    background: var(--white);
+}
+
 
 
 /* -----------------------------  Google Fonts ------------------------------------------------- */
@@ -23,13 +36,17 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    color: var(--white);
 }
 
 .conSection {
     display: flex;
     justify-content: center;
 }
-
+button{
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
 .container {
     width: 90%;
 }
@@ -309,6 +326,7 @@ a {
 }
 .patternCon{
     position: relative;
+   
 }
 .patternCon .patternImg{
    height: 90%;
@@ -349,5 +367,95 @@ a {
     }
   } */
 
+  .heroContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .heroGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 75%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .heroGrid .heroGridLeft h6{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: fit-content;
+  }
+  .heroGrid .heroGridLeft h2{
+    font-size: 42px;
+    font-weight: 900;
+  }
+  .heroGrid .heroGridLeft h2 span{
+    color: var(--primary-blue-three);
+  }
+
+  .heroGrid .heroGridLeft button{
+    background-color: var(--primary-blue-three);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+
+  }
+  .heroGridRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .heroGridRight img{
+    height: 65vh;
+    object-fit: contain;
+    animation: updown 10s infinite;
+  }
+
+  @keyframes updown {
+    0% {
+      transform: translateY(0px);
+      
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+  } 
+
+  .achivementArea{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 0 32px;
+  }
+  .achivementArea .achivement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .achivementArea .achivement img{
+    height: 42px;
+  }
+  .achivementArea .achivement p{
+    font-size: 12px;
+    font-weight: 200;
+    width: 136px;
+    text-align: center;
+  }
+ 
 
 /**************************************************  Home Page End  ***********************************************/
