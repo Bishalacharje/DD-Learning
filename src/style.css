@@ -1,14 +1,15 @@
 /*---------------------------------------------------- Color ------------------------- ------------*/
 :root {
 
-    --primary-blue: #06103C;
+    --primary-blue: #061036;
     --primary-blue-two: #141450;
     --primary-blue-three: #913BFF;
     --white: #f9f9f9;
 }
 
 /*---------------------------------------------------- Text Selection------------------------- ------------*/
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+    /* Code for Firefox */
     color: var(--white);
     background: var();
 }
@@ -43,16 +44,18 @@ body {
     display: flex;
     justify-content: center;
 }
-button{
+
+button {
     cursor: pointer;
     font-family: "Poppins", sans-serif;
 }
+
 .container {
     width: 90%;
 }
 
 a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -197,7 +200,8 @@ a {
     position: relative;
     transition: all 0.3s ease-in-out;
 }
-.navbar .navbarLeft .navmenu li:hover{
+
+.navbar .navbarLeft .navmenu li:hover {
     color: var(--primary-blue-three);
 }
 
@@ -223,7 +227,8 @@ a {
     padding: 10px 20px !important;
     transition: all 0.3s ease-in-out;
 }
-.navmenu li .submenu li:hover{
+
+.navmenu li .submenu li:hover {
     background-color: var(--primary-blue-three);
 }
 
@@ -233,7 +238,8 @@ a {
     color: #333;
     transition: all 0.3s ease-in-out;
 }
-.navmenu li .submenu li:hover a{
+
+.navmenu li .submenu li:hover a {
 
     color: #fff;
 }
@@ -296,47 +302,150 @@ a {
 
 
 /* ------------------------------------------------------------------------------------------------------ */
-/* -----------------------------  Footer Section ------------------------------------------------- */
+/* -----------------------------  Footer Section Start ------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------ */
 
 
 .footerSection {
     width: 100%;
-    height: 400px;
-    background-color: blueviolet;
+    background-color: var(--primary-blue);
+
+}
+
+.footerTopSection {
+    padding: 142px 0 64px;
+    border-top: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+.footerTop {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 48px;
+}
+.footerTopLogo {
+    position: relative;
+}
+.footerTopLogo h3{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 42px;
+    background-color: var(--primary-blue-three);
+    padding: 36px 42px;
+    width: fit-content;
+    transform: rotate(270deg);
+    position: absolute;
+    left: -96px;
+    top: 60px;
+}
+.footerTopLogo h3 span{
+    font-weight: 100;
+    font-size: 28px;
+}
+
+.footerMenu h6{
+    font-size: 20px;
+    margin-bottom: 48px;
+    position: relative;
+}
+.footerMenu h6::before{
+    border: 2px dashed var(--white);
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 140%;
+    width: 90px;
+    z-index: 1;
+}
+.footerMenu ul li{
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    padding-left: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+}
+.footerMenu ul li::before{
+    content: "";
+    top: 12px;
+    left: 0;
+    position: absolute;
+    width: 4px;
+    height: 2px;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+.footerMenu ul li:hover{
+    padding-left: 20px;
+}
+.footerMenu ul li:hover::before{
+    background-color: var(--primary-blue-three);
+    width: 12px;
+}
+
+.socialFlex{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.socialFlex .socialIconCon{
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid hsla(0, 0%, 100%, .1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.socialFlex .socialIconCon img{
+    height: 50%;
+    object-fit: contain;
+}
+.socialFlex .socialIconCon:hover{
+    background-color: var(--primary-blue-three);
 }
 
 
-
-
 /* ------------------------------------------------------------------------------------------------------ */
-/* -----------------------------  Footer Section ------------------------------------------------- */
+/* -----------------------------  Footer Section End  ------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------ */
 
 
 
-/**************************************************  Home Page Start  ***********************************************/
+/*************************************************************************************************/
 
 
 
 
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Hero Section  Start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
 .heroSection {
     height: calc(100vh - 150px);
     background-color: var(--primary-blue);
 }
-.patternCon{
+
+.patternCon {
     position: relative;
-   
+
 }
-.patternCon .patternImg{
-   height: 90%;
+
+.patternCon .patternImg {
+    height: 90%;
     object-fit: contain;
     position: absolute;
     right: 0;
     top: 0;
     opacity: 0.2;
 }
-.patternCon .patternImg2{
+
+.patternCon .patternImg2 {
     height: 100%;
     object-fit: contain;
     opacity: 0.1;
@@ -367,72 +476,107 @@ a {
     }
   } */
 
-  .heroContainer{
+.heroContainer {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  .heroGrid{
+}
+
+.heroGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     height: 75%;
     position: relative;
     z-index: 2;
-  }
+}
 
-  .heroGrid .heroGridLeft h6{
+
+
+.heroGrid .heroGridLeft h2 {
+    font-size: 42px;
+    font-weight: 900;
+    /* Adding the animation */
+    animation: slideRight 0.6s ease-out forwards;
+
+}
+
+/* Keyframes for slide down animation */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heroGrid .heroGridLeft h2 span {
+    color: var(--primary-blue-three);
+}
+
+.heroGrid .heroGridLeft h6 {
     font-size: 14px;
     font-weight: 500;
     margin: 10px 0 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     width: fit-content;
-  }
-  .heroGrid .heroGridLeft h2{
-    font-size: 42px;
-    font-weight: 900;
-  }
-  .heroGrid .heroGridLeft h2 span{
-    color: var(--primary-blue-three);
-  }
+    animation: slideRight 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
 
-  .heroGrid .heroGridLeft button{
+.heroGrid .heroGridLeft button {
     background-color: var(--primary-blue-three);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
+    border: 1px solid var(--primary-blue-three);
+    padding: 10px 32px;
+    border-radius: 50px;
     color: var(--white);
     font-size: 14px;
     font-weight: 600;
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
 
-  }
-  .heroGridRight {
+.heroGridRight {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .heroGridRight img{
+}
+
+.heroGridRight img {
     height: 65vh;
     object-fit: contain;
     animation: updown 10s infinite;
-  }
 
-  @keyframes updown {
+}
+
+
+
+
+
+@keyframes updown {
     0% {
-      transform: translateY(0px);
-      
+        transform: translateY(0px);
+
     }
+
     50% {
-        transform: translateY(30px);
+        transform: translateY(-30px);
     }
+
     100% {
         transform: translateY(0px);
     }
-  } 
+}
 
-  .achivementArea{
+.achivementArea {
     width: 100%;
     position: relative;
     z-index: 2;
@@ -440,22 +584,284 @@ a {
     align-items: flex-end;
     justify-content: space-between;
     padding: 10px 0 32px;
-  }
-  .achivementArea .achivement{
+    /* Adding the animation */
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.slide-down {
+    animation: slideUp 1s ease-out forwards;
+}
+
+/* Keyframes for slide down animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.achivementArea .achivement {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
-  }
-  .achivementArea .achivement img{
+}
+
+.achivementArea .achivement img {
     height: 42px;
-  }
-  .achivementArea .achivement p{
-    font-size: 12px;
-    font-weight: 200;
+}
+
+.achivementArea .achivement p {
+    font-size: 11px;
+    font-weight: 700;
     width: 136px;
     text-align: center;
-  }
- 
+    color: var(--white);
+    border-radius: 100px;
+}
 
-/**************************************************  Home Page End  ***********************************************/
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Hero Section end------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  About Section  Start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+.aboutSection {
+    height: 100vh;
+    background-color: var(--primary-blue);
+    align-items: center;
+    position: relative;
+
+}
+
+.aboutSection .container {
+    margin: 50px 0;
+}
+
+.aboutheading h3 {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    margin-bottom: -24px;
+    color: var(--primary-blue-three);
+}
+
+.aboutheading h1 {
+    font-size: 120px;
+    line-height: 146px;
+    font-weight: 600;
+}
+
+.aboutheading h6 {
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 84px;
+    margin-left: 49%;
+    margin-top: -42px;
+    margin-bottom: 30px;
+}
+
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 100px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.aboutGrid .aboutGridLeft p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-right: 30%;
+
+}
+
+.aboutGrid .aboutGridLeft .readMoreButton {
+    background-color: transparent;
+    border: 1px solid var(--primary-blue-three);
+    padding: 10px 32px;
+    margin-top: 30px;
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.aboutGrid .aboutGridLeft .readMoreButton:hover {
+    background-color: var(--primary-blue-three);
+}
+
+.aboutSection p {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease-out;
+    transition-delay: 0.6s;
+}
+
+.aboutSection .readMoreButton {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+    transition-delay: 1.2s;
+}
+
+.aboutSection.visible p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.aboutSection.visible .readMoreButton {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+.aboutGrid .aboutGridRight {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 30px;
+}
+
+.aboutGridRight .counterFlex {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    justify-content: end;
+    width: fit-content;
+    padding-left: 20px;
+    background-color: #ffffffc0;
+    padding: 14px 26px 14px 18px;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s ease-out;
+    transition-delay: 1.5s;
+}
+
+
+.counterFlex.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* .aboutGridRight .counterFlex.center{
+    border-top: 1px solid hsla(0,0%,100%,.1);
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    margin: 30px 0;
+    padding: 30px 0;
+
+} */
+
+.counterIcon {
+    background-color: #E7EDF8;
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counterIcon img {
+    width: 50%;
+    object-fit: contain;
+}
+
+.counterText {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.aboutGridRight .counterFlex h2 {
+    font-size: 18px;
+    color: var(--primary-blue-three);
+}
+
+.aboutGridRight .counterFlex p {
+
+    font-size: 14px;
+    text-align: right;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  About Section  Start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Recognitions Section  Start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+.recognitionSection {
+    background-color: var(--primary-blue);
+}
+
+.recognitionSection .container {
+    margin: 50px 0;
+}
+
+.recognitionSection h2 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 55px;
+}
+
+.recognitionSection h2 span {
+    color: var(--primary-blue-three);
+}
+
+.recognitionFlex {
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+    transition-delay: 0.6s;
+}
+
+
+.recognitionFlex.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recognitionFlex img {
+    height: 64px;
+}
+
+.recognitionFlex.top {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px dashed hsla(0, 0%, 100%, .1);
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Recognitions Section  Start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
