@@ -31,8 +31,8 @@ export default function Footer() {
               <ul>
                 <li>Privacy Policy</li>
                 <li>Terms & Conditions</li>
-                <li>Customer Policy</li>
-                <li>Contact US</li>
+                <li>FAQ</li>
+                <li>Contact Us</li>
               </ul>
             </div>
             <div className="footerSocial">
