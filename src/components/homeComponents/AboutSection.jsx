@@ -5,6 +5,7 @@ import CountUp from 'react-countup';
 import ratingstart from '../../assets/image-pattern/rating-stars.png';
 import mobiledev from '../../assets/image-pattern/mobile-development.png';
 import useravatar from '../../assets/image-pattern/users-avatar.png';
+import pattern2 from '../../assets/image-pattern/line-round-8c.png';
 
 function AboutSection() {
     const sectionRef = useRef(null);
@@ -44,6 +45,7 @@ function AboutSection() {
 
     return (
         <div className="aboutSection conSection" ref={sectionRef}>
+            <img src={pattern2} alt="Mobile Development Icon" className='aboutPatternImg' />
             <div className="container">
                 <div className="aboutGrid">
                     <div className="aboutGridLeft">

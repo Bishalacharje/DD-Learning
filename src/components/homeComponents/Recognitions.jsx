@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import assamdowntown from '../../assets/Recognitions/assam-downtown.png';
 import aws from '../../assets/Recognitions/aws.png';
 import corporateaffairs from '../../assets/Recognitions/corporate-affairs.png';
@@ -10,10 +9,10 @@ import msme from '../../assets/Recognitions/msme.png';
 import startupindia from '../../assets/Recognitions/startup-india.png';
 import startuptripura from '../../assets/Recognitions/startup-tripura.png';
 
-
 function Recognitions() {
     const topRef = useRef(null);
     const bottomRef = useRef(null);
+    const headingRef = useRef(null);
 
     useEffect(() => {
         const options = {
@@ -31,17 +30,19 @@ function Recognitions() {
 
         if (topRef.current) observer.observe(topRef.current);
         if (bottomRef.current) observer.observe(bottomRef.current);
+        if (headingRef.current) observer.observe(headingRef.current);
 
         return () => {
             if (topRef.current) observer.unobserve(topRef.current);
             if (bottomRef.current) observer.unobserve(bottomRef.current);
+            if (headingRef.current) observer.unobserve(headingRef.current);
         };
     }, []);
 
     return (
         <div className="recognitionSection conSection">
             <div className="container">
-                <h2>Our <span>Recognitions</span></h2>
+                <h2 ref={headingRef}>Our <span>Recognitions</span></h2>
                 <div className="recognitionFlex top" ref={topRef}>
                     <div className="recognitionIcon">
                         <img src={corporateaffairs} alt="Corporate Affairs" />

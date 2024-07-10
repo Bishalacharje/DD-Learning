@@ -24,7 +24,7 @@
 /* -----------------------------  Google Fonts ------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
 
 /* ------------------------------------------------------------------------------------------------------ */
 /* -----------------------------  Universal Selector Start ------------------------------------------------- */
@@ -37,7 +37,9 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    /* font-family: "Antonio", sans-serif; */
     color: var(--white);
+    background-color: var(--primary-blue);
 }
 
 .conSection {
@@ -47,16 +49,23 @@ body {
 
 button {
     cursor: pointer;
+    /* font-family: "Antonio", sans-serif; */
     font-family: "Poppins", sans-serif;
 }
 
 .container {
-    width: 90%;
+    width: 95%;
 }
 
 a {
     color: var(--white);
     text-decoration: none;
+}
+p{
+    color: #d1d1d1;
+}
+.margin-left-20{
+    margin: 0 20px;
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
@@ -85,6 +94,8 @@ a {
     align-items: center;
     column-gap: 8px;
     font-size: 32px;
+    
+    font-family: "Poppins", sans-serif; 
 
 }
 
@@ -139,13 +150,13 @@ a {
 }
 
 .headcontact .headcontactItem p {
-    font-size: 15px;
+    font-size: 13px;
     font-size: 100;
 }
 
 .headcontact .headcontactItem h5 {
-    font-size: 16px;
-    font-weight: 800;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 
@@ -199,6 +210,7 @@ a {
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease-in-out;
+    
 }
 
 .navbar .navbarLeft .navmenu li:hover {
@@ -309,12 +321,22 @@ a {
 .footerSection {
     width: 100%;
     background-color: var(--primary-blue);
+    position: relative;
+    overflow: hidden;
+}
 
+.footerSection .footerPatternImg{
+    width: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: updown 6s infinite;
 }
 
 .footerTopSection {
     padding: 142px 0 64px;
     border-top: 1px solid hsla(0, 0%, 100%, .1);
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
 }
 
 .footerTop {
@@ -337,7 +359,7 @@ a {
     transform: rotate(270deg);
     position: absolute;
     left: -96px;
-    top: 60px;
+    top: 50px;
 }
 .footerTopLogo h3 span{
     font-weight: 100;
@@ -360,7 +382,7 @@ a {
 }
 .footerMenu ul li{
     list-style: none;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 24px;
     position: relative;
     padding-left: 12px;
@@ -390,6 +412,7 @@ a {
     display: flex;
     align-items: center;
     column-gap: 15px;
+    margin-bottom: 30px;
 }
 
 .socialFlex .socialIconCon{
@@ -409,6 +432,25 @@ a {
 }
 .socialFlex .socialIconCon:hover{
     background-color: var(--primary-blue-three);
+}
+.footerSocial a{
+    font-size: 14px;
+    display: block;
+    font-weight: 500;
+    margin: 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+.footerSocial a:hover{
+    color: var(--primary-blue-three);
+}
+
+.footerBottomSection{
+    padding: 48px 0;
+}
+
+.footerBottomSection p{
+    font-size: 12px;
+    text-align: center;
 }
 
 
@@ -437,18 +479,18 @@ a {
 }
 
 .patternCon .patternImg {
-    height: 90%;
+    height: 100%;
     object-fit: contain;
     position: absolute;
     right: 0;
     top: 0;
-    opacity: 0.2;
+    opacity: 1;
 }
 
 .patternCon .patternImg2 {
     height: 100%;
     object-fit: contain;
-    opacity: 0.1;
+    opacity: 1;
     position: absolute;
     left: 0;
     top: 0;
@@ -625,6 +667,8 @@ a {
     text-align: center;
     color: var(--white);
     border-radius: 100px;
+    
+    font-family: "Poppins", sans-serif; 
 }
 
 
@@ -640,15 +684,27 @@ a {
 
 
 .aboutSection {
-    height: 100vh;
+    padding: 50px 0;
     background-color: var(--primary-blue);
+    /* background: linear-gradient(180deg, rgba(145, 59, 255, .1), rgba(145, 59, 255, .01)); */
     align-items: center;
     position: relative;
 
 }
 
+.aboutSection .aboutPatternImg{
+    width: 360px;
+    object-fit: contain;
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+    opacity: 1;
+    animation: updown 6s infinite;
+}
+
 .aboutSection .container {
-    margin: 50px 0;
+  
+    z-index: 2;
 }
 
 .aboutheading h3 {
@@ -657,12 +713,14 @@ a {
     font-weight: 700;
     margin-bottom: -24px;
     color: var(--primary-blue-three);
+    font-family: "Poppins", sans-serif; 
 }
 
 .aboutheading h1 {
     font-size: 120px;
     line-height: 146px;
     font-weight: 600;
+    font-family: "Poppins", sans-serif; 
 }
 
 .aboutheading h6 {
@@ -672,6 +730,7 @@ a {
     margin-left: 49%;
     margin-top: -42px;
     margin-bottom: 30px;
+    font-family: "Poppins", sans-serif; 
 }
 
 .aboutGrid {
@@ -684,9 +743,9 @@ a {
 
 .aboutGrid .aboutGridLeft p {
     font-size: 14px;
+    line-height: 25px;
     margin-bottom: 20px;
-    padding-right: 30%;
-
+    padding-right: 10%;
 }
 
 .aboutGrid .aboutGridLeft .readMoreButton {
@@ -716,6 +775,10 @@ a {
     transform: translateY(30px);
     transition: all 0.6s ease-out;
     transition-delay: 1.2s;
+}
+.aboutSection .readMoreButton:hover{
+    background-color: var(--primary-blue-three);
+    transition-delay: 0;
 }
 
 .aboutSection.visible p {
@@ -810,7 +873,7 @@ a {
 
 
 /* ------------------------------------------------------------------------------------------------------ */
-/* -----------------------------  About Section  Start------------------------------------------------- */
+/* -----------------------------  About Section  End ------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------ */
 
 
@@ -827,10 +890,18 @@ a {
 }
 
 .recognitionSection h2 {
-    font-size: 32px;
+    font-size: 50px;
+    font-weight: 600;
     text-align: center;
-    font-weight: 800;
     margin-bottom: 55px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+}
+.recognitionSection h2.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .recognitionSection h2 span {
@@ -843,7 +914,7 @@ a {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-out;
-    transition-delay: 0.6s;
+    transition-delay: 0.5s;
 }
 
 
@@ -863,5 +934,692 @@ a {
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
-/* -----------------------------  Recognitions Section  Start------------------------------------------------- */
+/* -----------------------------  Recognitions Section  end------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Service Section start ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+.serviceSection{
+    width: 100%;
+    background: var(--primary-blue);
+    padding: 100px 0 50px;
+    min-height: 80vh;
+}
+
+.serviceCon .serviceTitle h2{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.serviceCon .serviceTitle h2 span{
+    color: var(--primary-blue-three);
+}
+
+.serviceCon .serviceTitle p{
+    font-weight: 700;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.serviceTitle h2,
+.serviceTitle p,
+.serviceBox {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.serviceSection h2.visible,
+.serviceSection p.visible,
+.serviceBox.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.serviceGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    margin-top: 54px;
+}
+
+.serviceBox{
+    /* height: 400px; */
+    background: linear-gradient(180deg, rgba(145, 59, 255, .1), rgba(145, 59, 255, .01));
+    padding: 36px 32px 32px;
+    position: relative;
+    transition: all .3s ease 0s;
+    cursor: auto;
+    transition-delay: 0.5s;
+}
+
+.serviceBox::after{
+    background: var(--primary-blue-three);
+    content: " ";
+    height: 0%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .3s ease 0s;
+    width: 100%;
+    z-index: -1;
+}
+
+.serviceBox:hover::after{
+    height: 100%;
+    z-index: 1;
+}
+.serviceBox .serviceBoxPattern{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all .3s ease 0s;
+    width: 132px;
+}
+
+.serviceBox:hover .serviceBoxPattern{
+    opacity: 1;
+    z-index: 2;
+}
+.serviceBoxCon{
+    position: relative;
+    z-index: 3;
+}
+.serviceBoxCon img{
+    height: 60px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.serviceBox:hover .serviceBoxCon img{
+    transform: scale(1.1);
+}
+.serviceBoxCon h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.serviceBoxCon p{
+    text-align: left;
+    font-size: 12px;
+    padding: 0;
+}
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Service Section end------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Stakeholder Section start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+
+.stakeholderSection{
+    padding: 50px 0 0;
+    background-color: var(--primary-blue);
+}
+
+
+.stakeholder{
+    width: 100%;
+}
+
+.stakeholderTitle h2{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 64px;
+    /* opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; */
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+
+}
+.stakeholderTitle h2 span{
+    color: var(--primary-blue-three);
+}
+.stakeholderSlider{
+    margin: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    
+}
+
+
+
+.stakeholderTitle h2 {
+    
+}
+
+.stakeholderSection.visible .stakeholderTitle h2{
+    opacity: 1;
+    animation: slideUp 1s ease-out forwards;
+}
+.stakeholderSection.visible .stakeholderSlider {
+    opacity: 1;
+    animation: slideUp 1s ease-out forwards;
+    
+}
+
+.stakeholderSlider img{
+    height: 60px;
+    margin: auto;
+}
+.stakeholderSlider .slick-dots{
+    display: none !important;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Stakeholder Section end------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Project Slider Section start------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+.projectSliderSection{
+    background-color: var(--primary-blue);
+    padding: 50px 0;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition-delay: 0.5s;
+}
+.projectSliderSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.projectSliderTitle h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.projectSliderTitle h2 span{
+    color: var(--primary-blue-three);
+}
+.projectSliderTitle h5{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+.projectSlider{
+    margin-top: 55px;
+    transition: transform 0.3s ease;
+    
+}
+.projectBox{
+    
+    height: 452px;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--primary-blue);
+    
+}
+
+
+
+.projectSlider .slick-prev,
+.projectSlider .slick-next{
+    top: -70px;
+   
+}
+.slick-prev,
+.slick-next{
+    border: 1px solid hsla(0,0%,100%,.5);
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-blue);
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+}
+.slick-prev:hover,
+.slick-next:hover{
+    background-color: var(--primary-blue-three);
+    border: 2px solid var(--primary-blue-three);
+}
+.projectSlider .slick-next{
+    right: 0;
+}
+.projectSlider .slick-prev{
+    right: 80px;
+    left: auto;
+
+}
+
+.slick-prev:before, .slick-next:before{
+    font-family: auto;
+    font-size: 24px;
+    cursor: pointer;
+}
+.projectSlider .slick-dots{
+    display: none !important;
+}
+
+.projectBox .projectBoxCon{
+    margin-right: 40px;
+    height: 100%;
+    position: relative;
+    
+}
+
+.projectBoxCon .projectImageCon{
+  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    
+}
+.projectBoxCon .projectImageCon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+.projectBox:hover .projectBoxCon .projectImageCon img{
+    transform: scale(1.02);
+}
+
+.projectBoxCon .projectBoxOverlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to top right, #00064db2 0%, #00000000 100%);
+    transition: all 0.5s ease-in-out;
+
+}
+.projectBoxOverlay::after{
+    background: linear-gradient(to bottom, #00000000 0%, #a159ff 100%);
+    content: " ";
+    height: 0%;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    transition: all .3s ease 0s;
+    width: 100%;
+    z-index: -1;
+}
+.projectBoxOverlay:hover{
+    background-color: transparent;
+}
+
+.projectBoxOverlay:hover::after{
+    height: 100%;
+    z-index: 1;
+}
+.projectBoxOverlay .projectText{
+    position: relative;
+    z-index: 2;
+    padding: 0 36px 24px 30px;
+    
+}
+.projectText .projectLink{
+    width: 50px;
+    height: 0px;
+    border-radius: 100px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue-three);
+    transform: rotate(320deg);
+    font-size: 22px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+}
+.projectText .projectLink:hover{
+    color: var(--white);
+    background-color: var(--primary-blue-three);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.projectBox:hover .projectText .projectLink{
+    height: 50px;
+    opacity: 1;
+}
+
+.projectText h5{
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--white);
+    margin-bottom: 10px;
+    width: fit-content;
+}
+.projectTextLines{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.projectBox:hover .projectTextLines{
+    height: auto;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Project Slider Section End  ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Team Section Start  ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+.teamSection{
+    padding: 50px 0;
+}
+
+.teamTitle h2{
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.teamTitle h2 span{
+    color: var(--primary-blue-three);
+}
+.teamTitle h5{
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.teamGrid{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0;
+    column-gap: 10vw
+}
+
+.teamGrid.teamGrid2{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15%;
+    margin-top: 55px;
+}
+
+
+
+
+  .teamText{
+    background-color: var(--white);
+  }
+
+  .teamBox .teamBoxCon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .teamBoxCon .teamImgCon{
+    width: calc(100% - 32px);
+    height: 300px;
+    background: linear-gradient(180deg,rgba(145, 59, 255, .01), rgba(145, 59, 255, .1) );
+
+    /* background-color: #DFE4E6; */
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.teamBoxCon .teamImgCon::after{
+    content: '';
+    right: -16px;
+    width: 16px;
+    height: 60%;
+    bottom: 0;
+    margin: 0 auto;
+    position: absolute;
+    background-color: #1E264A;
+    
+    transition: all .3s ease 0s;
+}
+.teamBoxCon .teamImgCon::before{
+    content: '';
+    left: -16px;
+    width: 16px;
+    height: 60%;
+    bottom: 0;
+    margin: 0 auto;
+    position: absolute;
+    background-color: #1E264A;
+   
+    transition: all .3s ease 0s;
+}
+
+.teamImgCon img{
+    height: 100%;
+}
+.teamBox:hover .teamBoxCon .teamImgCon::after{
+    background-color: var(--primary-blue-three);
+}
+.teamBox:hover .teamBoxCon .teamImgCon::before{
+    background-color: var(--primary-blue-three);
+}
+
+
+.teamBoxCon .teamText{
+    background-color: #eddfff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: all .3s ease 0s;
+    
+}
+.teamBoxCon .teamText p{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--primary-blue-three);
+}
+.teamBoxCon .teamText h3{
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary-blue-two);
+}
+.teamBox:hover .teamBoxCon .teamText{
+    background-color: var(--white);
+}
+.teamTextcon{
+    position: relative;
+    width: 100%;
+}
+.teamTextcon .teamSocial{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+
+}
+
+.teamSocial .teamSocialLink{
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-blue-three);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.teamSocial .teamSocialLink:hover{
+    background-color: var(--primary-blue);
+}
+
+.teamSocial .teamSocialLink img{
+    height: 50%;
+    object-fit: contain;
+}
+.teamBox:hover .teamTextcon .teamSocial{
+    top: -60px;
+}
+
+.teamTitle,
+.teamGrid {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.teamTitle.visible,
+.teamGrid.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Team Section End  ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Products Section Start  ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+.productSection{
+    padding: 50px 0;
+    min-height: 60vh;
+}
+.productGrid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.productTitle h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.productTitle h2 span{
+    color: var(--primary-blue-three);
+}
+.productTitle h5{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.productGridLeft{
+    border-right: 1px solid hsla(0, 0%, 100%, .1);
+}
+.productGridLeft h3{
+    font-size: 36px;
+    line-height: 42px;
+    color: #fff;
+}
+.productGridLeft h3 span{
+    color: var(--primary-blue-three);
+}
+.productGridLeft h4{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.instituteSlider {
+    margin-top: 80px;
+}
+
+.instituteSlider .institute {
+    padding-right: 36px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.instituteSlider .institute img {
+    width: 92px;
+    border-radius: 12px;
+}
+
+/* Slick Slider Customizations */
+.instituteSlider .slick-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 520px;
+}
+
+.instituteSlider .slick-dots {
+    bottom: -30px;
+}
+
+
+
+
+.instituteSlider .slick-prev {
+    display: none !important;
+}
+
+.instituteSlider .slick-next {
+    right: -100px;
+}
+
+
+.productIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.productIcon.first{
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    padding-bottom: 30px;
+}
+.productIcon img{
+    height: 232px;
+}
+.productIcon a{
+    background-color: transparent;
+    border: 1px solid var(--primary-blue-three);
+    padding: 10px 32px;
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* -----------------------------  Products Section End  ------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------ */

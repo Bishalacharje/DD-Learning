@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-import pattern from '../../assets/image-pattern/pattern.png';
+import hero3a from '../../assets/image-pattern/hero-shape-3a.png';
+import hero3b from '../../assets/image-pattern/hero-shape-3b.png';
 // import pattern3 from '../../assets/image-pattern/pattern3.png';
 // import patterncenter from '../../assets/image-pattern/pattern-center.png';
 import heroimage from '../../assets/image-pattern/heroimage.png';
@@ -11,8 +12,8 @@ import achivementImage from '../../assets/image-pattern/winner.png';
 function Herosection() {
   return (
     <div className='heroSection conSection patternCon'>
-            <img className='patternImg' src={pattern} alt="" />
-            {/* <img className='patternImg2' src={pattern3} alt="" /> */}
+            <img className='patternImg' src={hero3a} alt="" />
+            <img className='patternImg2' src={hero3b} alt="" />
             {/* <img className='patternImgcenter' src={patterncenter} alt="" /> */}
             <div className="container heroContainer">
                 <div className="heroGrid">
