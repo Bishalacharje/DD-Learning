@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import bhavan from '../../assets/products/bhavan.png';
 import bhomik from '../../assets/products/bhomik.png';
@@ -15,6 +15,31 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 function Products() {
+    const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        if (sectionRef.current) observer.observe(sectionRef.current);
+
+        return () => {
+            if (sectionRef.current) observer.unobserve(sectionRef.current);
+        };
+    }, []);
+
+
     const settings = {
         dots: true,
         infinite: true,
@@ -42,7 +67,7 @@ function Products() {
     };
 
     return (
-        <div className="productSection conSection">
+        <div ref={sectionRef} className={`productSection conSection ${isVisible ? 'visible' : ''}`}>
             <div className="container">
                 <div className="productCon">
                     <div className="productGrid">
