@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Header from '../../components/Include/Header';
 import Footer from '../../components/Include/Footer';
@@ -20,18 +21,21 @@ import Testimonial from '../../components/homeComponents/Testimonial';
 export default function home() {
     return (
         <div>
+            <Helmet>
+                <title>D&D Learning</title>
+            </Helmet>
             <Topheader />
             <Header />
             <div className="homePage">
-               <Herosection />
-               <Service />
-               <Stakeholder />
-               <ProjectSlider />
-               <AboutSection />
-               <Team />
-               <Products />
-               <Testimonial />
-               <Recognitions />
+                <Herosection />
+                <Service />
+                <Stakeholder />
+                <ProjectSlider />
+                <AboutSection />
+                <Team />
+                <Products />
+                <Testimonial />
+                <Recognitions />
             </div>
 
             <Footer />

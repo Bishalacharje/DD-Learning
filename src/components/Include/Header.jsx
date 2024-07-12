@@ -37,6 +37,7 @@ export default function Header() {
               <li className="dropdown">
                 About Us <i className="fa-solid fa-angle-down"></i>
                 <ul className="submenu">
+                <li><Link to="/about">About D&D Learning</Link></li>
                   <li><Link to="/team">Our Team</Link></li>
                   <li><Link to="/careers">Careers</Link></li>
                   <li><Link to="/contact">Contact Us</Link></li>
